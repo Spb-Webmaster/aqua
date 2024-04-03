@@ -1,0 +1,23 @@
+@import "@fontsource/source-sans-pro";
+@import "@fontsource/source-sans-pro/400.css";
+@import "@fontsource/source-sans-pro/400-italic.css";
+@import "@fontsource/source-sans-pro/300.css";
+@import "@fontsource/source-sans-pro/300-italic.css";
+@import "@fontsource/source-sans-pro/600.css";
+@import "@fontsource/source-sans-pro/cyrillic-600-italic.css";
+@import "@fontsource/inter";
+@import "@fontsource/inter/100.css";
+@import "@fontsource/inter/200.css";
+@import "@fontsource/inter/300.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/700.css";
+
+@import "./chosen/chosen.scss";
+@import "./flash.scss";
+@import "./fancybox.scss";
+@import "./pagination.scss";
+@import "./general-style/paddind.scss";
+@import "./general-style/width.scss";
+@import "./auth/login.scss";
+@import "./style.scss";
+@import "./media.scss";

@@ -1,0 +1,480 @@
+@charset "utf-8";
+$color: #282828;
+$colorRed: #EF533F;
+$colorCCC: #CCCCCC;
+$colorGrey: #667085;
+$colorGreen: #28a745;
+/*$colorBlue: #00AFEF;*/
+$colorBlue: #2571B7;
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin family {
+    font-family: 'Source Sans Pro', "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+
+@mixin family_inter {
+    font-family: 'Inter', "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+
+///////////////////////////////////
+// формы  //////
+///////////////////////////////////
+
+.formLogin {
+    padding: 24px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 450px;
+}
+
+.cabinet {
+    .formLogin {
+        max-width: 1000px;
+    }
+}
+
+.x-forms {
+    display: flex;
+    .x-forms__left {
+        width: 50%;
+        padding-right: 16px;
+
+    }
+    .x-forms__right {
+        padding-left: 16px;
+        width: 50%;
+    }
+}
+
+
+/* input ++ */
+
+#inputFormRow {
+
+    .input-group {
+        position: relative;
+        display: flex;
+
+        .form-control {
+
+        }
+        .input-group-append {
+         position: relative;
+            button {
+                position: absolute;
+                right: 0;
+                top: 2px;
+                min-width: 100px;
+            }
+        }
+    }
+
+
+
+}
+#addRow {
+    margin-top: 9px;
+}
+/* input ++ */
+
+.blockForm {
+    h1 {
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 1.3em;
+        padding: 0 0 20px 0;
+    }
+
+
+}
+
+form.form {
+    .text_input {
+        padding: 5px 0;
+        position: relative;
+        &__text {
+            padding: 6px 0;
+            font-weight: 700;
+        }
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        height: 48px;
+        border-radius: 6px;
+        border: 1px solid #dddddd;
+        color: $colorGrey;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        padding: 13px 10px 0 10px;
+        margin: 2px 0;
+    }
+
+    .labelInput {
+        left: .8em;
+        position: absolute;
+        top: 1.5em;
+        transition: all 0.1s linear;
+        color: $colorGrey;
+    }
+
+
+
+    .inputClass:focus + .labelInput,
+    .inputClass + .labelInput.show {
+        border-radius: 4px;
+        color: $colorBlue;
+        left: .8em;
+        padding: 0 .15em;
+        top: 1em;
+        font-size: 13px;
+    }
+
+
+    //   transform: translateY(-30px) translateX(10px) scale(0.75);
+
+
+    .errorBlade {
+        font-size: 12px;
+        padding: 0 5px 0 12px;
+        color: $colorRed;
+    }
+
+}
+
+.slotButtons {
+    text-decoration: none;
+    padding: 16px 0;
+    a {
+        text-decoration: none;
+
+    }
+
+}
+.button {
+    width: auto;
+    height: 40px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    font-size: 16px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: $colorBlue;
+    color: #fff;
+    min-width: 100px;
+    border-radius: 6px;
+    border: 1px solid $colorBlue;
+}
+a.button_big,
+button.button_big {
+
+    width: 100%;
+    height: 48px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    font-size: 18px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: $colorBlue;
+    color: #fff;
+    max-width: 200px;
+    border-radius: 6px;
+    border: 1px solid $colorBlue;
+
+
+}
+a.button_big:hover,
+button.button_big:hover {
+    background: #fff;
+    color: $colorBlue;
+    max-width: 200px;
+    border-radius: 6px;
+
+}
+a.button_send,
+ button.button_send {
+
+     width: 100%;
+     height: 38px;
+     font-weight: 400;
+     letter-spacing: 0.7px;
+     font-size: 16px;
+     font-style: normal;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0 10px;
+     cursor: pointer;
+     transition: 0.3s;
+     background: $colorBlue;
+     color: #fff;
+     max-width: 100px;
+     border-radius: 6px;
+     border: 1px solid $colorBlue;
+
+
+ }
+a.button_send:hover,
+button.button_send:hover {
+    background: #fff;
+    color: $colorBlue;
+
+}
+
+
+
+.button_big {
+    span {
+        font-weight: 400;
+        letter-spacing: 0.7px;
+        font-size: 18px;
+        font-style: normal;
+    }
+}
+.button_red {
+    width: 100%;
+    height: 48px;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    font-size: 18px;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: $colorRed;
+    color: #fff;
+    max-width: 200px;
+    border-radius: 6px;
+    border: 1px solid $colorRed;
+}
+
+
+///////////////////////////////////
+// формы //////
+///////////////////////////////////
+
+.logout2 {
+    display: flex;
+    align-items: center;
+    height: 30px;
+
+    img {
+        width: 20px;
+        height: 20px;
+        margin: 0 16px 0 0;
+
+    }
+
+    button {
+        background: none;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        border-radius: 0;
+        color: $colorGrey;
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+
+    }
+
+    button:hover {
+        color: $colorBlue;
+
+    }
+}
+
+._is-error {
+    border: 1px solid $colorRed !important;
+}
+
+/* scroll-block */
+.scroll-block {
+    max-height: 405px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.scroll-block::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+.scroll-block::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll-block::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #fff;
+}
+
+.scroll-block:hover::-webkit-scrollbar-thumb {
+    background: #ebebed;
+}
+
+/* scroll-block */
+
+
+/*  sendMessage  */
+.sendMessage {
+    min-height: 114px;
+    color: #fff;
+    background: #52C3B8;
+    border-radius: 16px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+
+
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sendColl {
+        position: relative;
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"] {
+            height: 58px;
+        }
+
+        button{
+            height: 58px !important;
+        }
+        .errorBlade {
+            position: absolute;
+            font-size: 10px;
+            color: $colorRed;
+            line-height: 1em;
+        }
+    }
+
+    .sendColl_1 {
+        width: 30%;
+        padding: 0 10px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .sendColl_2 {
+        width: 23%;
+        padding: 0 4px;
+    }
+
+    .sendColl_3 {
+        width: 23%;
+        padding: 0 4px;
+
+    }
+
+    .sendColl_4 {
+        width: 23%;
+        padding: 0 4px;
+
+    }
+    .sendColl:last-child {
+        padding: 0 0 0 4px ;
+    }
+    .sendColl {
+
+    }
+}
+
+/*  sendMessage  */
+
+
+
+
+.input-file {
+    position: relative;
+    display: inline-block;
+}
+.input-file-btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    background-color: $colorGreen;
+    height: 48px;
+    line-height: 29px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    transition: background-color 0.2s;
+    border-radius: 6px;
+}
+.input-file-text {
+    padding: 0 10px;
+    line-height: 40px;
+    display: inline-block;
+}
+.input-file input[type=file] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+/* Focus */
+.input-file input[type=file]:focus + .input-file-btn {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Hover/active */
+.input-file:hover .input-file-btn {
+    background-color: #59be6e;
+}
+.input-file:active .input-file-btn {
+    background-color: #2E703A;
+}
+
+/* Disabled */
+.input-file input[type=file]:disabled + .input-file-btn {
+    background-color: #eee;
+}
+
+.sport__td  {
+    input.inputClass {
+        text-align: center;
+        padding: 10px !important;
+        font-size: 19px !important;
+        color: $color !important;
+    }
+}

@@ -1,0 +1,49 @@
+@charset "utf-8";
+$color: #282828;
+$colorRed: #EF533F;
+$colorCCC: #CCCCCC;
+$colorGrey: #667085;
+$colorGreen: #28a745;
+/*$colorBlue: #00AFEF;*/
+$colorBlue: #2571B7;
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+@mixin family {
+    font-family: 'Source Sans Pro', "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+
+@mixin family_inter {
+    font-family: 'Inter', "Arial Narrow", Arial, Helvetica, sans-serif;
+}
+.flashMassegeFixed {
+    position: relative;
+    width: 100%;
+    min-height: 50px;
+    z-index: 10;
+
+}
+.flashMassege {
+
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    &.class__info {
+        background: $colorGreen;
+
+    }
+    &.class__alert {
+background: $colorRed;
+    }
+}

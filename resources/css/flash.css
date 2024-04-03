@@ -1,0 +1,23 @@
+/*$colorBlue: #00AFEF;*/
+.flashMassegeFixed {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  z-index: 10; }
+
+.flashMassege {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #fff; }
+  .flashMassege.class__info {
+    background: #28a745; }
+  .flashMassege.class__alert {
+    background: #EF533F; }
+
+/*# sourceMappingURL=flash.css.map */
